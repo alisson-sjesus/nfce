@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    'input output'
+    'botao .';
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input {
+  display: grid;
+  justify-items: center;
+}
+
+.input-area,
+.output-area {
+  border: 2px solid black;
+  resize: none;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.input h1,
+.output h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: #4b42f5;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid black;
+  box-shadow: 3px 5px 5px black;
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: #211c80;
+}
