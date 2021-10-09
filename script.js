@@ -1,6 +1,10 @@
 const txt = document.querySelector('.input-area');
 const btn = document.querySelector('.btn');
 
+const valores = {
+  numeros: '',
+};
+
 btn.addEventListener('click', () => {
   const rege = /(?:0{2,})(\d+)(\s\d+)/gm;
   const value = txt.value;
@@ -23,6 +27,7 @@ btn.addEventListener('click', () => {
   });
   const newArray = arrayVirgula.join(',');
   output.innerHTML = newArray;
+  valores.numeros = newArray;
 });
 
 // GERADOR DE SCRIPT //
@@ -85,16 +90,22 @@ where situacao = 0 and dataentsai between ${mesAtual}`;
 
 const selecionar = document.querySelector('#selecionar-script');
 const resultadoScript = document.querySelector('.resultado-script');
+resultadoScript.innerText = nfcePendentes;
 
 selecionar.addEventListener('change', () => {
   const opcao = selecionar.value;
-
   if (opcao === '1') {
     resultadoScript.innerText = nfcePendentes;
   } else if (opcao === '2') {
     resultadoScript.innerText = inutilizarNFCe;
   } else if (opcao === '3') {
     resultadoScript.innerText = exportarNFCe;
+  } else if (opcao === '4') {
+    resultadoScript.innerText = `select m.* from nfmaster m
+    --left join nfdet n on m.idnfmaster = n.idnfmaster
+    --left join vendas v on v.idnfmaster = m.idnfmaster
+    --left join areceber a on v.idcompra = a.idcompra
+    where situacao = 0 and dataentsai between ${mesAtual}
+    and m.numnota in (${valores.numeros})`;
   }
-  console.log(opcao);
 });
