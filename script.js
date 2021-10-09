@@ -105,7 +105,7 @@ selecionar.addEventListener('change', () => {
     --left join nfdet n on m.idnfmaster = n.idnfmaster
     --left join vendas v on v.idnfmaster = m.idnfmaster
     --left join areceber a on v.idcompra = a.idcompra
-    where situacao = 0 and dataentsai between ${mesAtual}
+    where situacao = 0 and serie = 'NFC-E' and dataentsai between ${mesAtual}
     and m.numnota in (${valores.numeros})`;
   }
 });
