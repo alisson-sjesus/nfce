@@ -38,40 +38,40 @@ let mesAtual;
 
 switch (mes) {
   case 0:
-    mesAtual = `01.12.${ano - 1} and 31.12.${ano - 1}`;
+    mesAtual = `'01.12.${ano - 1}' and '31.12.${ano - 1}'`;
     break;
   case 1:
-    mesAtual = `01.01.${ano - 1} and 31.01.${ano}`;
+    mesAtual = `'01.01.${ano}' and '31.01.${ano}'`;
     break;
   case 2:
-    mesAtual = `01.02.${ano - 1} and 28.02.${ano}`;
+    mesAtual = `'01.02.${ano}' and '28.02.${ano}'`;
     break;
   case 3:
-    mesAtual = `01.03.${ano - 1} and 31.03.${ano}`;
+    mesAtual = `'01.03.${ano}' and '31.03.${ano}'`;
     break;
   case 4:
-    mesAtual = `01.04.${ano - 1} and 30.04.${ano}`;
+    mesAtual = `'01.04.${ano}' and '30.04.${ano}'`;
     break;
   case 5:
-    mesAtual = `01.05.${ano - 1} and 31.05.${ano}`;
+    mesAtual = `'01.05.${ano}' and '31.05.${ano}'`;
     break;
   case 6:
-    mesAtual = `01.06.${ano - 1} and 30.06.${ano}`;
+    mesAtual = `'01.06.${ano}' and '30.06.${ano}'`;
     break;
   case 7:
-    mesAtual = `01.07.${ano - 1} and 31.07.${ano}`;
+    mesAtual = `'01.07.${ano}' and '31.07.${ano}'`;
     break;
   case 8:
-    mesAtual = `01.08.${ano - 1} and 31.08.${ano}`;
+    mesAtual = `'01.08.${ano}' and '31.08.${ano}'`;
     break;
   case 9:
-    mesAtual = `01.09.${ano - 1} and 30.09.${ano}`;
+    mesAtual = `'01.09.${ano}' and '30.09.${ano}'`;
     break;
   case 10:
-    mesAtual = `01.10.${ano - 1} and 31.10.${ano}`;
+    mesAtual = `'01.10.${ano}' and '31.10.${ano}'`;
     break;
   case 11:
-    mesAtual = `01.12.${ano - 1} and 31.12.${ano}`;
+    mesAtual = `'01.12.${ano}' and '31.12.${ano}'`;
     break;
 
   default:
